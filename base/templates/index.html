@@ -265,6 +265,25 @@
         </div>
     </section>
 
+    <section id="newsletter" class="section">
+        
+        <form action="." method="post">
+            <div class="newstext">
+                <h4>RECEBA AS NOVIDADES DA BLEAR</h4>
+                <p>Cadastre-se e seja um dos primeiros a saber todas as <span>novidades e ofertas.</span> </p>
+            </div>
+            <div class="form">
+                {% if sucesso %}
+                <p>Obrigado por assinar!</p>
+                {% else %}
+                {% csrf_token %}
+                {{form}}
+                <input class="normal" type="submit" value="Sign Up">
+                {% endif %}
+            </div>
+        </form>
+    </section>
+
     <section class="contact">
         <div class="contact-info">
             <div class="first-info">
